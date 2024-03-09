@@ -1,0 +1,14 @@
+{
+  "name": "namastereact",
+  "version": "1.0.0",
+  "description": "this is learning npm",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "Sumanyu Sharma",
+  "license": "ISC"
+}
