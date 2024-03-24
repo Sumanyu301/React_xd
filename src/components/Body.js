@@ -1,11 +1,12 @@
 import RestaurantCards from "./RestaurantCards";
 import { useEffect, useState } from "react";
+import Shimmer from "./Shimmer";
 const Body = () => {
   useEffect(() => {
     fetchData();
   }, []);
 
-  const [listOfRestaurants, setlistOfRestaurants] = useState([]);
+  const [listOfRestaurants, setlistOfRestaurants] = useState();
   const [searchData, setSearchData] = useState();
   const [renderData, setrenderData] = useState([]);
   const fetchData = async () => {
@@ -22,7 +23,9 @@ const Body = () => {
         ?.restaurants
     );
   };
-  return (
+  return !listOfRestaurants ? (
+    <Shimmer></Shimmer>
+  ) : (
     <div className="body">
       <div className="search-container">
         <div className="search">
